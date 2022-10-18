@@ -2,6 +2,7 @@ import React from 'react'
 import { ResumeItem } from '../ResumeItem'
 
 import * as C from './style'
+import PropTypes from 'prop-types'
 
 import {
   FaRegArrowAltCircleUp,
@@ -25,4 +26,10 @@ export const Resume = ({ income, expense, total }) => {
       <ResumeItem title="Entradas" Icon={FaDollarSign} value={total} />
     </C.Container>
   )
+}
+
+Resume.propTypes = {
+  income: PropTypes.number,
+  expense: PropTypes.number,
+  total: PropTypes.number,
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 
 import * as C from './style'
+import PropTypes from 'prop-types'
 
 import {
   FaRegArrowAltCircleUp,
@@ -44,4 +45,9 @@ export const Tabela = ({ list, deleteItem }) => {
       </table>
     </C.ContainerItem>
   )
+}
+
+Tabela.propTypes = {
+  list: PropTypes.array,
+  deleteItem: PropTypes.func,
 }

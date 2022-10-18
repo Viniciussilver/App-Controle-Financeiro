@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 import { v4 as uuid } from 'uuid'
+import PropTypes from 'prop-types'
 
 import * as C from './style'
 
@@ -75,4 +76,7 @@ export const Form = ({ handleAdd }) => {
       <button onClick={handleSave}>Adicionar</button>
     </C.ContainerForm>
   )
+}
+Form.propTypes = {
+  handleAdd: PropTypes.func,
 }
